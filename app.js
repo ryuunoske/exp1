@@ -4,10 +4,12 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-var db = require)'./model/db');
+var methodOverride = require('method-override'); //used to manipulate POST
+var db = require('./model/db');
+var users = require('./model/user');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var user = require('./routes/users');
 
 var app = express();
 
